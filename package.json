@@ -1,0 +1,27 @@
+{
+  "name": "cypress_typescript",
+  "version": "1.0.0",
+  "description": "Cypress in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samvpillay-Tester/Cypress_TypeScript.git"
+  },
+  "keywords": [
+    "Cypress",
+    "TypeScript"
+  ],
+  "author": "samvpillay@hotmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samvpillay-Tester/Cypress_TypeScript/issues"
+  },
+  "homepage": "https://github.com/samvpillay-Tester/Cypress_TypeScript#readme",
+  "devDependencies": {
+    "cypress": "^8.4.1",
+    "typescript": "^4.4.3"
+  }
+}
