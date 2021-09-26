@@ -8,7 +8,7 @@ context('Spies, Stubs, and Clock', () => {
     cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
 
     const obj = {
-      foo () {},
+      foo () {'Test'},
     }
 
     const spy = cy.spy(obj, 'foo').as('anyArgs')
@@ -24,9 +24,9 @@ context('Spies, Stubs, and Clock', () => {
     const obj = {
       /**
        * Prints the argument passed
-       * @param x {any}
+       * @param x {string}
       */
-      foo (x) {
+      foo (x: string) {
         console.log('obj.foo called with', x)
       },
     }
@@ -115,12 +115,10 @@ context('Spies, Stubs, and Clock', () => {
       .withArgs(Cypress.sinon.match.number).throws(new Error('Invalid name'))
 
     expect(greeter.greet('World')).to.equal('Hi')
-    // @ts-ignore
     expect(() => greeter.greet(42)).to.throw('Invalid name')
     expect(greeter.greet).to.have.been.calledTwice
 
     // non-matched calls goes the actual method
-    // @ts-ignore
     expect(greeter.greet()).to.equal('Hello, undefined!')
   })
 
